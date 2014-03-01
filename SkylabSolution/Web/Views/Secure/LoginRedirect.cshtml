@@ -1,0 +1,25 @@
+﻿@using Skylab.Core.Elms
+@model Skylab.Core.ViewModels.Secure.LoginRedirectVM
+@{
+	ViewBag.Title = "Sikertelen bejelentkezés";
+}
+
+<h1 class="page-header">Sikertelen bejelentkezés</h1>
+
+<div class="alert alert-error">
+		@switch( this.Model.FailureReason )
+		{
+			case ElmsRegistrationFailureReason.MissingEmail:
+				@: A letöltőszerverre nem sikerült bejelentkezni, mert a Címtár adatai között nincs megadva az e-mail címe. <br />
+				@: Adja meg az e-mail címét a Neptunban, majd 24 óra elteltével próbálja meg ismét a bejelentkezést.
+				break;
+
+			case ElmsRegistrationFailureReason.ClientError:
+				@: A letöltőszerverre nem sikerült bejelentkezni, de sajnos a szerver nem adott bővebb információt arról, hogy miért nem.
+				break;
+
+			case ElmsRegistrationFailureReason.ServiceError:
+				@: A letöltőszerverre nem sikerült bejelentkezni, mert a szolgáltatás jelenleg nem érhető el, valószínűleg karbantartás miatt. Kérjük próbálja meg a bejelentkezést később.
+				break;
+		}
+</div>

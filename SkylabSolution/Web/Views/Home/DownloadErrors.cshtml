@@ -1,0 +1,106 @@
+﻿@{
+	ViewBag.Title = "Letöltési hibakódok";
+	ViewBag.MetaKeywords = "MSDNAA, DreamSpark, szoftver, letöltés, hiba";
+	ViewBag.MetaDescription = "A letöltés során kapott hibakódok magyarázata.";
+}
+
+<h1 class="page-header">Letöltési hibakódok</h1>
+
+
+<p>
+	A letöltő szerver használata közben a letöltő kliens hibakódokkal jelzi a különböző problémákat.
+	Amennyiben a rendszer által jelzett hibakód magyarázata nem segít a probléma megoldásában, javasoljuk, hogy ellenőrizze,
+	hogy az	<strong>operációs rendszer összes frissítése fel van-e telepítve</strong> vagy frissítse rendszerét a
+	<a target="_blank" href="http://update.microsoft.com/microsoftupdate">
+		Microsoft Update
+	</a> oldalról.
+</p>
+
+<p>
+	<span class="label label-important">FONTOS!</span>
+	<span class="text-error">
+		A sikeres letöltéshez a letöltendő telepítőcsomag legalább kétszeresének megfelelő szabad hely szükséges a diszken!
+	</span>
+</p>
+
+<p>Az egyes hibakódok magyarázata a következő:</p>
+
+
+<ul class="unstyled">
+	<li><i class="icon-arrow-down"></i> <a href="#SDC100">SDC 00100</a></li>
+	<li><i class="icon-arrow-down"></i> <a href="#SDC200">SDC 00200</a></li>
+	<li><i class="icon-arrow-down"></i> <a href="#SDC300">SDC 00300</a></li>
+	<li><i class="icon-arrow-down"></i> <a href="#SDC400">SDC 00400</a></li>
+	<li><i class="icon-arrow-down"></i> <a href="#SDC500">SDC 00500</a></li>
+	<li><i class="icon-arrow-down"></i> <a href="#Error70072">Error 70072</a></li>
+	<li><i class="icon-arrow-down"></i> <a href="#Error70077">Error 70077</a></li>
+</ul>
+
+
+<h2 class="text-original"><a name="SDC100"></a>SDC 00100 Error</h2>
+<p>
+	Unable to find the source CD (expecting to find a SDC file on a local CD).
+</p>
+
+
+<h2 class="text-original"><a name="SDC200"></a>SDC 00200 Error</h2>
+<p>
+	A general error that is typically caused by:
+</p>
+<ol type="a">
+	<li>insufficient disk space to unpack or</li>
+	<li>a disk error</li>
+</ol>
+
+<h2 class="text-original"><a name="SDC300"></a>SDC 00300 Error</h2>
+<p>
+	Unable to read from media, which is typically caused by the PC being:
+</p>
+<ol type="a">
+	<li>unable to connect to network resource (for a Network Based install) or</li>
+	<li>unable to read from CD (for a secure CD based install)</li>
+</ol>
+<p>
+	Please note that this is a network connection error only.
+</p>
+
+<h2 class="text-original"><a name="SDC400"></a>SDC 00400 Error</h2>
+<p>
+	Unable to complete the download, which is typically caused by:
+</p>
+<ol type="a">
+	<li>an error in the configuration of the download package, usually due to a bad hosting location</li>
+	<li>no Internet connection found</li>
+	<li>Internet connection lost</li>
+	<li>a firewall or proxy server between the client station and hosting location, or</li>
+	<li>insufficient disk space to download</li>
+</ol>
+
+<h2 class="text-original"><a name="SDC500"></a>SDC 00500 Error</h2>
+<p>
+	CRC check failed, which can mean that the package is corrupt and unusable. This is typically caused by:
+</p>
+<ol type="a">
+	<li>an incomplete transfer</li>
+	<li>a corruption during transfer or</li>
+	<li>a corrupt package on the host server</li>
+</ol>
+
+<h2 class="text-original"><a name="Error70072"></a>Error 70072</h2>
+<p>
+	Install limit has been reached, which is typically caused by:
+</p>
+<ol type="a">
+	<li>the customer having attempted to download a product too many times to different folders (it is possible that no downloads have been successful)</li>
+	<li>the customer having already successfully downloaded/installed the software, and now wanting to download again</li>
+</ol>
+
+<h2 class="text-original"><a name="Error70077"></a>Error 70077</h2>
+<p>
+	Parameter authorization failure, which typically means that:
+</p>
+<ol type="a">
+	<li>no hosting location has been provided on the system for the product or</li>
+	<li>the delivery client is corrupt (delete and download again).</li>
+</ol>
+

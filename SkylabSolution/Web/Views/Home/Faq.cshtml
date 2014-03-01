@@ -1,0 +1,327 @@
+﻿@{
+	ViewBag.Title = "Gyakran Ismétlődő Kérdések";
+	ViewBag.MetaKeywords = "GYIK, kérdések, válaszok, MSDNAA, DreamSpark, szoftver, letöltés";
+	ViewBag.MetaDescription = "Gyakran ismétlődő kérdések és válaszok a Microsoft DreamSpark programmal kapcsolatban.";
+}
+
+<h1 class="page-header">Gyakran Ismétlődő Kérdések <small>avagy GYIK</small></h1>
+
+<ul class="unstyled">
+	<li><i class="icon-arrow-down"></i> <a href="#Altalanos">Általános kérdések</a></li>
+	<li><i class="icon-arrow-down"></i> <a href="#Letoltes">Letöltéssel kapcsolatos kérdések</a></li>
+	<li><i class="icon-arrow-down"></i> <a href="#Telepites">Telepítéssel és aktiválással kapcsolatos kérdések</a></li>
+	<li><i class="icon-arrow-down"></i> <a href="#Licenc">Licenccel kapcsolatos kérdések</a></li>
+	<li><i class="icon-arrow-down"></i> <a href="#Uj">Új termékekkel kapcsolatos kérdések</a></li>
+</ul>
+
+<h2><a name="Altalanos"></a>Általános kérdések</h2>
+
+<p class="question">
+	K: Mit tegyek, hogy szoftverhez jussak?
+</p>
+<p>
+	V: A szoftverek letöltés útján érhetők el. Bővebb segítséget a
+	<a href="@Url.RouteUrl( RouteNames.Index )">kezdőlapon</a> található útmutatók nyújtanak.
+</p>
+
+<p class="question">
+	K: Pontosan milyen szoftvereket tartalmaz a DreamSpark program?
+</p>
+<p>
+	V: Tartalmazza az operációs rendszereket, fejlesztő
+	környezeteket és a legfőbb szerver termékeket, valamint
+	a fejlesztéshez kapcsolódó SDK-kat, dokumentációkat és
+	néhány segédalkalmazást. A DreamSpark programban nem szereplő
+	termékek közül a legfontosabb az Office csomag és a
+	játékok hiánya.
+</p>
+
+<p class="question">
+	K: Hogyan juthatok hozzá a magyar nyelvi verziókhoz?
+</p>
+<p>
+	V: Amennyiben egy termékből többféle nyelvű verzió is
+	létezik, akkor a termék oldalán van lehetőség a nyelv
+	kiválasztására. Sajnos nincs ráhatásunk arra, hogy a
+	letöltőszerveren az egyes termékek milyen nyelven érhetők
+	el.
+</p>
+
+
+<h2><a name="Letoltes"></a>Letöltéssel kapcsolatos kérdések</h2>
+
+<p class="question">
+	K: Mit tegyek ha nem megy a	letöltés?
+</p>
+<p class="answer">
+	V: Ellenőrizze, hogy mást le tud-e
+	tölteni (akár a DreamSpark szoftverek közül, akár máshonnan
+	az Internetről) vagy csak a kérdéses fájl nem megy.
+	Tapasztalataink szerint a
+	<a href="@Url.RouteUrl( RouteNames.DownloadErrors )">hibakódok magyarázata</a>
+	általában helyes, tehát célszerű az ott felsorolt okokat
+	még egyszer ellenőrizni. Ezen kívül célszerű a
+	<a href="http://update.microsoft.com/microsoftupdate">Microsoft Update oldal</a>ról
+	az összes operációs rendszer frissítést feltelepíteni -
+	volt, akinek ez oldotta meg a problémát. Amennyiben a hiba
+	látszólag nálunk van, a pontos szoftver konfigurációval és a
+	pontos hibaüzenettel forduljon a
+	<a href="@Url.RouteUrl( RouteNames.Contact )">program adminisztrátor</a>hoz.
+</p>
+
+<p class="question">
+	K: Hányszor tölthetem le a szoftvereket?
+</p>
+<p>
+	V: Sajnos a DreamSpark licenc értelmében (és a WebStore szervernek köszönhetően) egy terméket csak	egyszer tölthet le (ez még változhat a jövőben).
+</p>
+
+<p class="question">
+	K: Csak a BME hálózatán belülről érhető el a letöltő szerver?
+</p>
+<p>
+	V: A letöltő szerver elérésével kapcsolatban nincs korlátozás, azonban a szoftverek letöltéséhez rendelkeznie kell érvényes belépési azonosítóval.
+</p>
+
+<p class="question">
+	K: Mi történik, ha elhagyom a belépési azonosítómat?
+</p>
+<p>
+	V: A WebStore bejelentkező oldalán válassza <strong>Forgot your password?</strong> opciót.
+</p>
+
+<p class="question">
+	K: Tanszékek és kollégiumok	laboratóriumai hogyan juthatnak hozzá a szoftverekhez?
+</p>
+<p>
+	V: Kérhetnek személyesen
+	<a href="@Url.RouteUrl( RouteNames.AdminGuide )">Volume Licence verzió</a>t, vagy egy-két gép esetén ha nincs szükség
+	Volume Licence verzióra akkor letölthetik az általános verziót.
+</p>
+<p class="question">
+	K: Mit tegyek, ha nem találom a listában (nem tudom letölteni) azt a szoftvert, amihez hozzá szeretnék jutni?
+</p>
+<p>
+	V: Ellenőrizze, hogy ez a szoftver szerepel-e a DreamSpark programban, és ha igen akkor
+	kérje a <a href="@Url.RouteUrl( RouteNames.Contact )">program adminisztrátor</a> segítségét.
+</p>
+
+<p class="question">
+	K: Nem sikerült a letöltés és a hibakód magyarázata sem segített a probléma megoldásában. Mit tegyek?
+</p>
+<p>
+	V: Tapasztalataink szerint a <a href="@Url.RouteUrl( RouteNames.DownloadErrors )">hibakódok magyarázata</a>
+	általában helyes, tehát célszerű az ott felsorolt okokat még egyszer ellenőrizni. Ezen kívül célszerű a
+	<a href="http://update.microsoft.com/microsoftupdate">Microsoft Update oldal</a>ról az összes operációs
+	rendszer frissítést feltelepíteni - volt, akinek ez oldotta meg a problémát.
+</p>
+
+
+
+
+<h2><a name="Telepites"></a>Telepítéssel kapcsolatos kérdések</h2>
+
+
+<p class="question">
+	K: Operációs rendszert hogyan tudok telepíteni a letöltő szerverről?
+</p>
+<p>
+	V: A letöltő szerverről letöltött image fájlt (ISO) célszerű
+	kiírni pendrive-ra vagy DVD-re, majd onnan bootolni a
+	számítógépet. A DVD írást célszerű a lehető leglassabb
+	sebességgel elvégezni.
+</p>
+
+<p class="question">
+	K: Kell-e aktiválni a letöltött szoftvereket?
+</p>
+<p>
+	V: Bizonyos szoftverek aktiváció nélkül csak egy
+	meghatározott ideig használhatók, ezért aktiválni kell
+	őket. Az viszont fontos, hogy csak akkor szabad
+	aktiválni egy szoftvert, ha úgy érzi, hogy jól sikerült
+	a telepítés és a közeljövőben nem fogja újratelepíteni.
+	Ez azért fontos, mert egy kulccsal csak meghatározott
+	számú aktiválás hajtható végre.
+</p>
+
+<p class="question">
+	K: Laborokban egyesével kell aktiválni minden gépet?
+</p>
+<p>
+	V: Természetesen nem. Erre van a <a href="@Url.RouteUrl( RouteNames.AdminGuide )">Volume Licenc verzió</a>, amit tanszékek kérhetnek a
+	<a href="@Url.RouteUrl( RouteNames.Contact )">program adminisztrátor</a>tól.
+</p>
+
+<p class="question">
+	K: Honnan lesz telepítő kulcsom?
+</p>
+<p>
+	V: A letöltés során a WebStore automatikusan generál személyre szóló kulcsot minden termékhez, amelyhez szükséges.
+</p>
+
+<p class="question">
+	K: Mit tegyek ha Volume Licence kulcsot akarok?
+</p>
+<p>
+	V: Ilyen típusú kulcsot csak a tanszékek kaphatnak és
+	<a href="@Url.RouteUrl( RouteNames.AdminGuide )">személyesen kell kérni</a> a mindenkori
+	<a href="@Url.RouteUrl( RouteNames.Contact )">program adminisztrátor</a>tól.
+</p>
+
+<p class="question">
+	K: Mi történik, ha elhagyom az aktiváló kulcsaimat (és azok megjelennek az Interneten)?
+</p>
+<p>
+	V: Ez elég nagy hiba, de azért igyekszünk megoldást találni.
+	Kérje a <a href="@Url.RouteUrl( RouteNames.Contact )">program adminisztrátor</a> segítségét.
+</p>
+
+<p class="question">
+	K: Mit tegyek, ha aktiválni
+	szeretném a letöltött terméket, de az
+	aktiválás során azt a hibaüzenetet kapom, hogy a
+	termékkulcs már használatban van?
+</p>
+<p>
+	V: Hívja a 2-MSINFO (267-4636) vagy a hibaüzenetnél
+	megjelenő telefonszámot, ahol az ügyintéző tud segíteni
+	ezen a problémán. Feltétlenül tudassa az ügyintézővel,
+	hogy az egyetemi DreamSpark licenc keretében használja a szoftvert!
+</p>
+
+<p class="question">
+	K: Mit tegyek, ha aktiválni
+	szeretném a letöltött Windows klienst de
+	hardver változás miatt ezt már nem engedi meg a
+	rendszer?
+</p>
+<p>
+	V: Hívja a 2-MSINFO (267-4636) vagy a hibaüzenetnél
+	megjelenő telefonszámot, ahol az ügyintéző tud segíteni
+	ezen a problémán. Feltétlenül tudassa az ügyintézővel,
+	hogy az egyetemi DreamSpark licenc keretében használja a szoftvert!
+</p>
+
+<p class="question">
+	K: Mit tegyek, ha nem tudom a
+	második számítógépemen (otthoni, laptop) aktiválni a
+	szoftvert?
+</p>
+<p>
+	V: Írjon levelet az
+	<a href="mailto:msdnaa@bme.hu?subject=Masodik aktivalas">program adminisztrátornak "Második aktiválás"</a>
+	tárggyal.
+</p>
+
+
+<h2><a name="Licenc"></a>Licenccel kapcsolatos kérdések</h2>
+
+<p class="question">
+	K: Miért van külön Campus és DreamSpark licenc?
+</p>
+<p>
+	V: A két program kiegészíti egymást, a Campusban
+	például vannak Office termékek, míg a DreamSpark licenc nem
+	tartalmazza ezeket.
+</p>
+
+<p class="question">
+	K: Telepíthetem-e a szoftvereket az
+	otthoni gépemre?
+</p>
+<p>V: Természetesen igen. </p>
+<p class="question">
+	K: Használhatom-e a hallgatói
+	jogviszonyom megszűnése után is a szoftvereket?
+</p>
+
+<p>
+	V: Az intézmény elhagyása után a már feltelepített
+	szoftvereket nem kell eltávolítani a gépről, azok
+	továbbra is használhatóak a licencben meghatározott
+	esetekben, azonban újratelepíteni már nem szabad.
+</p>
+<p class="question">
+	K: Üzleti célra használhatom ezeket
+	a szoftvereket?
+</p>
+<p>
+	V: A DreamSpark keretében letöltött szoftverek csak
+	tanulmányi vagy kutatási célokra használhatók (lásd
+	<a href="@Url.RouteUrl( RouteNames.Licence )">licenc</a>).
+</p>
+
+<p class="question">
+	K: Mi az, hogy „oktatási-kutatási” célból?
+</p>
+<p>
+	V: A DreamSpark keretében megszerzett szoftvereket arra
+	lehet használni, hogy az intézet oktatói és hallgatói a
+	termékekkel kapcsolatos képzésben ki tudják próbálni
+	azokat, illetve hogy a szoftverek rendelkezésre álljanak
+	a velük kapcsolatos kutatáshoz. Az szoftvereket
+	nem lehet infrastrukturális célokra (például intézeti
+	belső levelezés megvalósítására vagy általános célú
+	fájlszerver céljára) felhasználni. Ha azonban a
+	fejlesztői oktatáshoz szükséges egy webszerver, erre
+	jogosan használható az DreamSparkban található Windows Server.
+</p>
+
+<p class="question">
+	K: Hogyan tudom igazolni a BSA felé,
+	hogy jogosultan használom az DreamSpark szoftvereket az
+	otthoni gépemen?
+</p>
+<p>
+	V: A szoftverkulcs alapján tudja igazolni, hogy a DreamSpark programból származik a szoftver. Problémásabb
+	ügyekben forduljon a mindenkori
+	<a href="@Url.RouteUrl( RouteNames.Contact )">program adminisztrátor</a>hoz.
+</p>
+
+<p class="question">
+	K: Tartalmaz-e a DreamSpark licenc
+	Windows Terminal Services licencet?
+</p>
+<p>
+	V: A DreamSpark program Windows Terminal Services
+	ügyfélhozzáférési (CAL) licenceket foglal magában.
+	Bővebb információ az
+	<a href="http://msdn2.microsoft.com/en-us/subscriptions/aa948876.aspx">MSDN oldalain</a> található.
+</p>
+
+<h2><a name="Uj"></a>Új termékekkel kapcsolatos kérdések</h2>
+
+<p class="question">
+	K: Mikor lesz letölthető az XY termék legújabb változata?
+</p>
+<p>
+	V: Sajnos nincs ráhatásunk arra, hogy egy adott termék mikor
+	kerül ki a letöltőszerverre. Az üzemeltetők tisztában vannak
+	azzal, hogy az új termékekre (főleg az operációs
+	rendszerekre) komoly igény van, de a tapasztalatok alapján
+	így is eltart pár hétig, mire egy terméket letölthetővé
+	tudnak tenni.
+</p>
+
+<p class="question">
+	K: Mikor lesz letölthető az Office XY verziója?
+</p>
+<p>
+	V: A DreamSpark licenc nem tartalmazza az Office
+	termékeket, azokat csak a Campus licencen keresztül
+	lehet elérni. Nem tudjuk, hogy az Office melyik
+	verziója és mikor lesz elérhető a Campusban.
+</p>
+
+<p class="question">
+	K: Mikor lesz elérhető az X termék magyar változata?
+</p>
+<p>
+	V: Nem tudjuk, hogy mikor készül el a Microsoft egy termék
+	lokalizálásával és azt sem tudjuk, hogy mikor lesz elérhető
+	a letöltő szerveren. Mindent megteszünk, hogy ez minél
+	hamarabb megtörténjen, de nincs beavatkozási lehetőségünk,
+	azaz nem rajtunk múlik.
+</p>
+

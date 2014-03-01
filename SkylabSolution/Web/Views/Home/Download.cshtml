@@ -1,0 +1,87 @@
+﻿@{
+	ViewBag.Title = "Letöltés";
+	ViewBag.MetaKeywords = "MSDNAA, DreamSpark, Microsoft, szoftver, letöltés";
+	ViewBag.MetaDescription = "Letölthető szoftverek a DreamSpark és a Campus programban.";
+}
+
+<h1 class="page-header">Letöltés <small>mit honnan</small></h1>
+
+<p>
+	Mivel mind a Campus, mind pedig a DreamSpark (korábbi nevén MSDNAA) szerződés keretében elérhetők szoftverek, ezen az oldalon azt foglaltuk össze, hogy mit honnan érdemes letölteni.
+</p>
+
+<table class="table table-bordered">
+	<tr>
+		<th>&nbsp;</th>
+		<th class="text-center"><strong>Campus*</strong></th>
+		<th class="text-center"><strong>DreamSpark (MSDNAA)</strong></th>
+	</tr>
+	<tr>
+		<td>
+			<strong>Kliens operációs rendszerek</strong><br />
+			(Windows 7, Windows 8)
+		</td>
+		<td class="text-center"><i class="icon-ok"></i></td>
+		<td class="text-center"><i class="icon-ok"></i></td>
+	</tr>
+	<tr>
+		<td>
+			<strong>Szerver operációs rendszerek</strong><br />
+			(Windows Server 2008, 2012)
+		</td>
+		<td>&nbsp;</td>
+		<td class="text-center"><i class="icon-ok"></i></td>
+	</tr>
+	<tr>
+		<td>
+			<strong>Szerver oldali alkalmazások</strong><br />
+			(pl. Exchange Server, SQL Server, SharePoint Server, Project Server stb.)
+		</td>
+		<td>&nbsp;</td>
+		<td class="text-center"><i class="icon-ok"></i></td>
+	</tr>
+	<tr>
+		<td>
+			<strong>Alap Office alkalmazások</strong><br />
+			(Word, Excel, PowerPoint, Outlook)
+		</td>
+		<td class="text-center"><i class="icon-ok"></i></td>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td>
+			<strong>További Office alkalmazások</strong><br />
+			(pl. Access, Project, Visio, OneNote, InfoPath stb.)
+		</td>
+		<td>&nbsp;</td>
+		<td class="text-center"><i class="icon-ok"></i></td>
+	</tr>
+	<tr>
+		<td>
+			<strong>Fejlesztőeszközök</strong><br />
+			(pl. Visual Studio, Team Foundation Server, XNA Studio, Expression Studio)
+		</td>
+		<td>&nbsp;</td>
+		<td class="text-center"><i class="icon-ok"></i></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td class="text-center">
+			<a href="ftp://software.eik.bme.hu" class="btn btn-primary">Letöltés</a>
+		</td>
+		<td class="text-center">
+			<a href="http://e5.onthehub.com/WebStore/Welcome.aspx?ws=42a261b1-869b-e011-969d-0030487d8897" class="btn btn-primary">Letöltés</a>
+		</td>
+	</tr>
+</table>
+
+<p>
+	<span class="label label-important">Fontos!</span>
+	* A Campus letöltő szerver csak egyetemi hálózatból érhető el.
+	<a href="http://net.bme.hu/sw/campus.php" target="_blank">Bővebb információk a Campus licencről és a termék aktiválásról</a>
+<p>
+
+<p>
+	<i class="icon-info-sign"></i> <a href="@Url.RouteUrl( RouteNames.DownloadErrors )">Letöltési hibakódok magyarázata</a>
+</p>
+

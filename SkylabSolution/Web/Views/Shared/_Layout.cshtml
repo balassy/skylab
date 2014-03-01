@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>@ViewBag.Title</title>
+	<meta name="keywords" lang="hu" content="@ViewBag.MetaKeywords" />
+	<meta name="description" lang="hu" content="@ViewBag.MetaDescription" />
+
+	<meta name="robots" content="ALL" />
+
+	<link rel="author" href="~/humans.txt" />
+
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+	
+	@Styles.Render( "~/Bundles/css/" )
+</head>
+<body>
+	<div class="container">
+		<header class="navbar">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-chevron-down"></span>
+					</a>
+					<a class="brand" href="@Url.RouteUrl( RouteNames.Index )">
+						<img class="hidden-phone" src="~/Static/img/bme-logo.png" alt="DreamSpark Program kezdőlap" />
+						<span class="visible-phone bme-color">DreamSpark @@ BME</span>
+					</a>
+					<div class="nav-collapse pull-right">
+						<nav>
+							<ul class="nav">
+								<li id="mnuKezdolap"><a href="@Url.RouteUrl( RouteNames.Index )">kezdőlap</a></li>
+								<li id="mnuLetoltes"><a href="@Url.RouteUrl( RouteNames.Download )">letöltés</a></li>
+								<li id="mnuGyik"><a href="@Url.RouteUrl( RouteNames.Faq )">gyik</a></li>
+								<li id="mnuKapcsolat"><a href="@Url.RouteUrl( RouteNames.Contact )">kapcsolat</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+
+
+		<div role="main">
+			@RenderBody()
+		</div>
+
+		<hr />
+
+		<footer>
+			<div class="visible-desktop visible-tablet">Copyright © Budapesti Műszaki és Gazdaságtudományi Egyetem</div>
+			<div class="visible-phone">Copyright © BME</div>
+		</footer>
+
+	</div>
+
+	@Scripts.Render( "~/Bundles/js/" )
+
+    <!-- Google Analytics start -->
+	<script>
+		var _gaq = [['_setAccount', 'UA-1431213-1'], ['_trackPageview']];
+		(function (d, t) {
+			var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+			g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g, s);
+		}(document, 'script'));
+	</script>
+	<!-- Google Analytics end -->
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿@model Skylab.Core.ViewModels.Login.LoginUserVM
+@{
+	ViewBag.Title = "Bejelentkezés";
+}
+
+<h1 class="page-header">Bejelentkezés</h1>
+
+<p>
+	A DreamSpark letöltőszerverre a központi BME címtár segítségével tud bejelentkezni.
+</p>
+
+<p>
+	Tájékoztatjuk, hogy a bejelentkezés során az ELMS letöltőszerver számára a Címtárban tárolt adatai közül <strong>átadódik az Ön e-mail címe</strong>,
+	de más személyes adatát a letöltőszerver szolgáltatójával nem osztjuk meg.
+</p>
+
+<p>
+	@if( Model.IsServiceAvailable )
+	{
+		<a href="@Url.RouteUrl( RouteNames.LoginRedirect )" class="btn btn-primary">Belépek a BME címtár azonosítómmal</a>
+		<i class="icon-lock btn-cancel"></i> <a href="https://login.bme.hu/admin/" target="_blank" title="Ha szerepelsz a Neptunban, de még nem állítottál be magadnak címtáras jelszót, ezen az oldalon megteheted.">Nincs még címtáras jelszavam vagy elfelejtettem</a>
+		<i class="icon-envelope btn-cancel"></i> <a href="mailto:support@login.bme.hu" title="A címtárral kapcsolatos kérdéseidet és észrevételeidet erre az e-mail címre írhatod meg.">Kérdésem van</a>
+	}
+</p>
+
+@if( !Model.IsServiceAvailable )
+{
+	<div class="alert alert-error">
+		<p>
+			<strong>A címtár nem elérhető!</strong>
+		</p>
+		<p>
+			A BME Címtár jelenleg sajnos nem elérhető, ezért most nem tudsz bejelentkezni a letöltőszerverre. Kérjük, hogy a
+			<a href="https://login.bme.hu" target="_blank">címtár oldalán</a> tájékozódj az esetleges tervezett üzemszünetekről,
+			és próbálj meg később bejelentkezni. A kellemetlenségért elnézést kérünk.
+		</p>
+	</div>
+}

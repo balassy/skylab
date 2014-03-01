@@ -1,0 +1,13 @@
+﻿/* TEAM */
+                            
+Creator: György Balássy                            
+Site: http://gyorgybalassy.wordpress.com                            
+Twitter: @gyorgybalassy                            
+Location: Budapest, Hungary
+
+                            
+/* SITE */
+Standards: HTML5, CSS3                            
+Components: jQuery, Metro Bootstrap      
+Language: Hungarian
+Doctype: HTML5                      
