@@ -21,6 +21,7 @@ namespace Skylab.Core.Views
 		/// <param name="subject">The proposed subject of the e-mail.</param>
 		/// <param name="body">The proposed body of the e-mail.</param>
 		/// <returns>A raw <c>a</c> tag that renders the link.</returns>
+		[SuppressMessage( "Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed", Justification = "Used only from C#." )]
 		[SuppressMessage( "Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "html", Justification = "Extension method to conform with other MVC helpers." )]
 		[SuppressMessage( "Microsoft.Design", "CA1062:Validate arguments of public methods", MessageId = "0", Justification = "Extension method." )]
 		public static IHtmlString EmailLink( this HtmlHelper html, string text, string emailAddress, string subject = null, string body = null )
