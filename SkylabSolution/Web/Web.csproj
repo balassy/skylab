@@ -159,6 +159,7 @@
       <DependentUpon>msdnaa.css</DependentUpon>
     </Content>
     <Content Include="Static\img\bme-logo.png" />
+    <Content Include="Static\img\fork-me-on-github.png" />
     <Content Include="Static\img\glyphicons-halflings.png" />
     <Content Include="Static\lib\bootstrap-collapse.js" />
     <Content Include="Static\lib\bootstrap-collapse.min.js">
