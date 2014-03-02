@@ -28,6 +28,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Old", "http://localhost:333
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{71EA7A42-91D2-405A-950A-1247BFCBE74C}"
 	ProjectSection(SolutionItems) = preProject
+		Skylab.snk = Skylab.snk
 		VS text editor settings.vssettings = VS text editor settings.vssettings
 	EndProjectSection
 EndProject

@@ -150,6 +150,9 @@
     <Content Include="Static\lib\bootstrap-transition.min.js">
       <DependentUpon>bootstrap-transition.js</DependentUpon>
     </Content>
+    <None Include="..\Skylab.snk">
+      <Link>Skylab.snk</Link>
+    </None>
     <None Include="Static\lib\jquery-1.8.3-vsdoc.js">
       <DependentUpon>jquery-1.8.3.js</DependentUpon>
     </None>
@@ -215,6 +218,12 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\Skylab.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
