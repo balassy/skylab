@@ -152,3 +152,6 @@ $RECYCLE.BIN/
 
 # Production environments
 [Ww]eb.[Rr]elease.config
+
+# Strong name key files
+*.key
