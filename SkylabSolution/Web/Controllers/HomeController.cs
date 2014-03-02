@@ -3,6 +3,7 @@ using System.Web.Mvc;
 
 namespace Skylab.Web.Controllers
 {
+	[OutputCache( CacheProfile = "StaticPage" )]
 	public partial class HomeController : Controller
 	{
 		public virtual ActionResult Index()
