@@ -6,9 +6,16 @@ using Skylab.Core.ViewModels.Login;
 
 namespace Skylab.Web.Controllers
 {
+	/// <summary>
+	/// Handles the HTTP requests for the login and logout pages.
+	/// </summary>
 	[SuppressMessage( "Microsoft.Naming", "CA1726:UsePreferredTerms", MessageId = "Login", Justification = "Our naming standard." )]
 	public partial class LoginController : Controller
 	{
+		/// <summary>
+		/// Renders the Login (Bejelentkezés) page.
+		/// </summary>
+		/// <returns>The HTML markup of the Login page.</returns>
 		[SuppressMessage( "Microsoft.Naming", "CA1726:UsePreferredTerms", MessageId = "Login", Justification = "Our naming standard." )]
 		public virtual ActionResult LoginUser()
 		{
@@ -30,6 +37,10 @@ namespace Skylab.Web.Controllers
 		}
 
 
+		/// <summary>
+		/// Renders the Logout (Kijelentkezés) page.
+		/// </summary>
+		/// <returns>The HTML markup of the Logout page.</returns>
 		[SuppressMessage( "Microsoft.Naming", "CA1726:UsePreferredTerms", MessageId = "Logout", Justification = "Our naming standard." )]
 		public virtual ViewResult LogoutUser()
 		{

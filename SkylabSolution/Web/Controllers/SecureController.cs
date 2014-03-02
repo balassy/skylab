@@ -31,6 +31,7 @@ namespace Skylab.Web.Controllers
 				throw new InvalidOperationException( "The Shibboleth token is required!" );
 			}
 
+			// Create the view-model.
 			LoginRedirectVM model = new LoginRedirectVM();
 
 			// Validate that the current user has her e-mail address specified, because it is required for the ELMS registration.
