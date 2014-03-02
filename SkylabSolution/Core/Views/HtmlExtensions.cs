@@ -7,6 +7,9 @@ using System.Web.Mvc;
 
 namespace Skylab.Core.Views
 {
+	/// <summary>
+	/// Extension methods for the <see cref="HtmlHelper"/> class.
+	/// </summary>
 	public static class HtmlExtensions
 	{
 		/// <summary>
