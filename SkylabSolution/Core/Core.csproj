@@ -83,6 +83,7 @@
     <Compile Include="ViewModels\Secure\LoginRedirectVM.cs" />
     <Compile Include="ViewModels\Login\LoginUserVM.cs" />
     <Compile Include="Views\CSOnlyRazorViewEngine.cs" />
+    <Compile Include="Views\HtmlExtensions.cs" />
     <Compile Include="Views\UrlExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
