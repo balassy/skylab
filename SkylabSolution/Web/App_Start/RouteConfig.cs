@@ -24,6 +24,9 @@ namespace Skylab.Web
 
 			routes.IgnoreRoute( "{resource}.axd/{*pathInfo}" );
 
+			// This ensures that the order of the handler mappings in the root web.config file does not affect the handling of the Shibboleth.sso path.
+			routes.IgnoreRoute( "{resource}.sso/{*pathInfo}" );
+
 			// For compatibility reasons, manually map all routes to the previously used URLs.
 			routes.MapRoute( RouteNames.Index, "index.html", MVC.Home.Index() );
 			routes.MapRoute( RouteNames.Faq, "hu/gyik.htm", MVC.Home.Faq() );
