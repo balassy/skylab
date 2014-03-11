@@ -74,6 +74,7 @@
     <Compile Include="Elms\ElmsRegistrationFailureReason.cs" />
     <Compile Include="Elms\ElmsRegistrationResult.cs" />
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Log.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\ServerVariableAttribute.cs" />
     <Compile Include="Security\ShibbolethHelper.cs" />

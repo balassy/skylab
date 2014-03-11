@@ -41,17 +41,21 @@ namespace Skylab.Core.Elms
 		/// </summary>
 		/// <param name="token">The Shibboleth token that describes the currently logged-in user.</param>
 		/// <returns>An <see cref="ElmsRegistrationResult"/> instance with the details of the registration.</returns>
+		[SuppressMessage( "Microsoft.Globalization", "CA1303:Do not pass literals as localized parameters", MessageId = "Skylab.Core.Log.WriteError(System.String)", Justification = "Localization is not supported yet on this site." )]
+		[SuppressMessage( "Microsoft.Naming", "CA2204:Literals should be spelled correctly", MessageId = "ElmsHelper", Justification = "False alarm." )]
 		[SuppressMessage( "Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes", Justification = "Fool-proof code required." )]
 		public static ElmsRegistrationResult Register( ShibbolethToken token )
 		{
 			// Input validation.
 			if( token == null )
 			{
+				Log.WriteError( "ElmsHelper.Register: token is null!" );
 				throw new ArgumentNullException( "token" );
 			}
 
 			if( String.IsNullOrEmpty( token.Email ) )
 			{
+				Log.WriteError( "ElmsHelper.Register: token.Email is null!" );
 				throw new ArgumentException( "The e-mail address is required for the registration!" );
 			}
 
@@ -83,6 +87,7 @@ namespace Skylab.Core.Elms
 			Uri serviceUri;
 			if( !Uri.TryCreate( serviceUrl, UriKind.Absolute, out serviceUri ) )
 			{
+				Log.WriteError( "ElmsHelper.Register: Invalid ServiceURL: {0}", serviceUrl );
 				throw new InvalidOperationException( "The service URL is invalid!" );
 			}
 
@@ -115,8 +120,27 @@ namespace Skylab.Core.Elms
 					}
 				}
 			}
-			catch
+			catch( WebException ex )
 			{
+				// Log the error.
+				Log.WriteError( ex );
+				Log.WriteError( "ElmsHelper.Register: WebException! ServiceURL: {0}", serviceUrl );
+
+				HttpWebResponse response = ex.Response as HttpWebResponse;
+				if( response != null )
+				{
+					Log.WriteError( "ElmsHelper.Register: WebException! StatusCode: {0}", response.StatusCode );
+					Log.WriteError( "ElmsHelper.Register: WebException! StatusDescription: {0}", response.StatusDescription );
+				}
+
+				// Treat the registration unsuccessful in case of any error.
+				result.IsSuccess = false;
+			}
+			catch( Exception ex )
+			{
+				// Log the error.
+				Log.WriteException( ex );
+
 				// Treat the registration unsuccessful in case of any error.
 				result.IsSuccess = false;
 			}
