@@ -10,18 +10,19 @@
 </p>
 
 <p>
-	Tájékoztatjuk, hogy a bejelentkezés során az ELMS letöltőszerver számára a Címtárban tárolt adatai közül <strong>átadódik az Ön e-mail címe</strong>,
+	Tájékoztatjuk, hogy a bejelentkezés során a letöltőszerver számára a Címtárban tárolt adatai közül <strong>átadódik az Ön e-mail címe</strong>,
 	de más személyes adatát a letöltőszerver szolgáltatójával nem osztjuk meg.
 </p>
 
-<p>
-	@if( Model.IsServiceAvailable )
-	{
+@if( Model.IsServiceAvailable )
+{
+	<p>
 		<a href="@Url.RouteUrl( RouteNames.LoginRedirect )" class="btn btn-primary">Belépek a BME címtár azonosítómmal</a>
 		<i class="icon-lock btn-cancel"></i> <a href="https://login.bme.hu/admin/" target="_blank" title="Ha szerepelsz a Neptunban, de még nem állítottál be magadnak címtáras jelszót, ezen az oldalon megteheted.">Nincs még címtáras jelszavam vagy elfelejtettem</a>
 		<i class="icon-envelope btn-cancel"></i> <a href="mailto:support@login.bme.hu" title="A címtárral kapcsolatos kérdéseidet és észrevételeidet erre az e-mail címre írhatod meg.">Kérdésem van</a>
-	}
+		<i class="icon-user btn-cancel"></i> <a href="http://e5.onthehub.com/WebStore/Security/SignIn.aspx?rurl=%2fWebStore%2fProductsByMajorVersionList.aspx%3fws%3d42a261b1-869b-e011-969d-0030487d8897&ws=42a261b1-869b-e011-969d-0030487d8897&vsro=8">Belépek a korábbi felhasználónevemmel és jelszavammal</a>
 </p>
+}
 
 @if( !Model.IsServiceAvailable )
 {

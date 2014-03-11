@@ -18,8 +18,6 @@
 	</p>
 
 	<p>
-		<a class="btn btn-primary" href="@Url.RouteUrl( RouteNames.RegistrationGuide )">Regisztráció</a>
-		&nbsp;
 		<a class="btn btn-primary" href="@Url.RouteUrl( RouteNames.Download )">Letöltés</a>
 		&nbsp;
 		<small><a href="@Url.RouteUrl( RouteNames.Program )">Bővebben a DreamSpark Premium programról</a></small>
@@ -36,8 +34,6 @@
 	</p>
 
 	<p class="text-center">
-		<a class="btn btn-primary" href="@Url.RouteUrl( RouteNames.RegistrationGuide )">Regisztráció</a>
-		&nbsp;
 		<a class="btn btn-primary" href="@Url.RouteUrl( RouteNames.Download )">Letöltés</a>
 	</p>
 	<p class="text-center">
@@ -45,13 +41,23 @@
 	</p>
 </div>
 
+<p>
+	<span class="label label-important">Fontos változás!</span>
+	<span class="text-error">
+		A letöltőszerverre 2014. márciusától <strong>nem szükséges külön regisztrálni</strong>, mert a bejelentkezés a BME Címtár segítségével történik.
+		<a href="@Url.RouteUrl( RouteNames.Faq, fragment: "Regisztracio" )">Gyakori kérdések &raquo;</a>
+	</span>
+</p>
+
+<p>&nbsp;</p>
+
 <div class="row">
 	<div class="span8">
 		<h2>Így juthat hozzá a szoftverekhez</h2>
 
 		<ul class="unstyled">
 			<li><i class="icon-ok"></i> Ellenőrizze, hogy vonatkozik-e Önre a <a href="@Url.RouteUrl( RouteNames.Licence )">DreamSpark licenc</a>!</li>
-			<li><i class="icon-ok"></i> Olvassa el a <a href="@Url.RouteUrl( RouteNames.RegistrationGuide )">regisztrációval</a> és a	<a href="@Url.RouteUrl( RouteNames.DownloadGuide )"> letöltéssel</a> kapcsolatos útmutatót!</li>
+			<li><i class="icon-ok"></i> Olvassa el a	<a href="@Url.RouteUrl( RouteNames.DownloadGuide )"> letöltéssel</a> kapcsolatos útmutatót!</li>
 			<li><i class="icon-ok"></i> Kattintson a felső menüben található <a href="@Url.RouteUrl( RouteNames.Download )">Letöltés</a> linkre!</li>
 		</ul>
 	</div>
@@ -60,7 +66,6 @@
 		<h2>útmutatók</h2>
 
 		<ul class="unstyled">
-			<li><i class="icon-info-sign"></i> <a href="@Url.RouteUrl( RouteNames.RegistrationGuide )" title="Segítség a regisztrációhoz">Regisztrációhoz</a></li>
 			<li><i class="icon-info-sign"></i> <a href="@Url.RouteUrl( RouteNames.DownloadGuide )" title="Segítség a letöltéshez">Letöltéshez</a></li>
 			<li><i class="icon-info-sign"></i> <a href="@Url.RouteUrl( RouteNames.AdminGuide )" title="Segítség rendszergazdáknak">Rendszergazdáknak</a></li>
 		</ul>
