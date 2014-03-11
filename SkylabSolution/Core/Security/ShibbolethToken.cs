@@ -106,7 +106,7 @@
 			get
 			{
 				this.EnsureAffiliations();
-				return this.affiliations.Contains( "student@bme.hu" );
+				return this.affiliations != null && this.affiliations.Contains( "student@bme.hu" );
 			}
 		}
 
@@ -120,7 +120,7 @@
 			get
 			{
 				this.EnsureAffiliations();
-				return this.affiliations.Contains( "faculty@bme.hu" ) || this.affiliations.Contains( "staff@bme.hu" ) || this.affiliations.Contains( "employee@bme.hu" );
+				return this.affiliations != null && ( this.affiliations.Contains( "faculty@bme.hu" ) || this.affiliations.Contains( "staff@bme.hu" ) || this.affiliations.Contains( "employee@bme.hu" ) );
 			}
 		}
 
@@ -159,7 +159,7 @@
 		/// </summary>
 		private void EnsureAffiliations()
 		{
-			if( this.affiliations == null )
+			if( this.affiliations == null && !String.IsNullOrEmpty( this.Affiliation ) )
 			{
 				this.affiliations = this.Affiliation.Split( ';' );
 			}
